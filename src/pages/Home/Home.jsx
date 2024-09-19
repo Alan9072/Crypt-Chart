@@ -41,7 +41,7 @@ function Home() {
           <p className="rank">Rank</p>
           <p style={{ paddingLeft: "20px" }}>Coin</p>
           <p style={{ textAlign: "center" }}>Price</p>
-          <p style={{ textAlign: "end" }}>24Hr Change</p>
+          <p style={{ textAlign: "end" }}>Changes <div style={{fontSize:"8px"}}>(24hr)</div></p>
         </div>
         <div className="cryptolist">
           {arr.map((item) => (
@@ -61,7 +61,7 @@ function Home() {
                 </p>
               </div>
               <p style={{ textAlign: "center" }}>
-                ${item.current_price}
+                ${item.current_price.toLocaleString()}
               </p>
               <p className="hrchange" style={{ textAlign: "end" }}>
                 {item.price_change_percentage_24h.toFixed(4) < 0 ? (

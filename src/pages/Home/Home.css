@@ -91,9 +91,9 @@ h1{
     align-items: center;
   }
   
-  .coin-info img {
-    width: 30px;
-    height: 30px;
+  .coin-info>img {
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
   }
 .hrchange{
@@ -114,5 +114,6 @@ h1{
     .cryptotable{
         width: 95%;
     }
+    
     
 }
