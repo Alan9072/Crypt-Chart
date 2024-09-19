@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Home.css";
 import { AiOutlineStock } from "react-icons/ai";
 import image from '../../assets/notfound.png'
+import { BsSearch } from "react-icons/bs";
 
 function Home({ curr ,query}) {
   const [arr, setArr] = useState([]);
@@ -56,6 +57,7 @@ function Home({ curr ,query}) {
 
   return (
     <div className="home">
+
       <div className="hero">
         <h1>Crypto Chart</h1>
         <p>Explore various cryptocurrencies and gain financial knowledge about them.</p>

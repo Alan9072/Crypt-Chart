@@ -5,6 +5,7 @@
     align-items: center;
     padding: 5px 30px;
     background-color: rgb(0, 0, 0);
+   
 }
 h2{
     color: white;
@@ -56,13 +57,5 @@ select{
     form{
         display: none;
     }
-    select{
-        display: none;
-    }
-    .menu{
-        display: block;
-    }
-
-    
-    
+     
 }
