@@ -6,6 +6,7 @@ import { BsSearch } from "react-icons/bs";
 
 function Home({ curr ,query}) {
   const [arr, setArr] = useState([]);
+  const [val,setVal] = useState("");
   const [exchangeRates, setExchangeRates] = useState({});
    // Add state for search query
 
@@ -49,11 +50,17 @@ function Home({ curr ,query}) {
     if (curr === "eur") return (price * (exchangeRates["EUR"] || 1)).toFixed(2);
     return price.toFixed(2); // Default case
   };
-
+  
   // Function to filter data based on the search query
-  const filteredData = arr.filter((item) =>
-    item.name.toLowerCase().includes(query.toLowerCase())
-  );
+  const filteredData = arr.filter((item) =>{
+    const searchTerm = val || query; 
+    return item.name.toLowerCase().includes(searchTerm.toLowerCase())
+});
+
+    const handleBtnSubmit=(e)=>{
+        e.preventDefault();
+    }
+  
 
   return (
     <div className="home">
@@ -63,15 +70,11 @@ function Home({ curr ,query}) {
         <p>Explore various cryptocurrencies and gain financial knowledge about them.</p>
       </div>
       
-      {/* Search Bar */}
-      {/* <div className="search-bar">
-        <input 
-          type="text" 
-          placeholder="Search for a cryptocurrency..." 
-          value={searchQuery} 
-          onChange={(e) => setSearchQuery(e.target.value)} 
-        />
-      </div> */}
+      
+        <form className="searchForm" action="" onSubmit={handleBtnSubmit}>
+            <input type="text" value={val} placeholder='Search crypto' onChange={(e)=>setVal(e.target.value)}/>
+            <BsSearch  onClick={handleBtnSubmit} style={{backgroundColor:"black",height:"0.7cm",width:"0.9cm",padding:"3px",borderRadius:"5px",color:"white"}}/>
+        </form>
 
       <div className="cryptotable">
         <div className="tablelayout">

@@ -16,9 +16,9 @@ function Navbar({curr,setCurr,query,setQuery}) {
   return (
     <div className='navbar'>
         <h2>Crypt-Chart</h2>
-        <form action="" onSubmit={handleBtnSubmit}>
+        <form className="navform" action="" onSubmit={handleBtnSubmit}>
             <input type="text" value={query} placeholder='Search crypto' onChange={handleChange}/>
-            <BsSearch onClick={handleBtnSubmit} style={{backgroundColor:"white",height:"0.7cm",width:"0.7cm",padding:"3px",borderRadius:"5px"}}/>
+            <BsSearch onClick={handleBtnSubmit} style={{backgroundColor:"white",height:"0.8cm",width:"0.9cm",padding:"3px",borderRadius:"5px"}}/>
         </form>
         <select value = {curr} onChange={(e)=>setCurr(e.target.value)}>
             <option value="usd" >USD</option>
