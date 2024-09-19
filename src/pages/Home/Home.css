@@ -1,0 +1,118 @@
+*{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.hero{
+    margin-top: 30px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+h1{
+    font-size: 1.2cm;
+    color: grey;
+}
+.hero > p{
+    margin-top: 10px;
+}
+.cryptotable{
+    margin-top: 30px;
+    width: 85%;
+    height:95vh;
+    background-color: rgba(0, 255, 255, 0);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+
+}
+.tablelayout{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(0, 0, 0);
+    padding: 15px 10px;
+    border-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    color: white;
+}
+.tablelayout>p{
+    width: 25%;
+}
+.cryptolist{
+    width: 100%;
+    height: calc(100% - 20px);
+    overflow: auto;
+    
+    display: flex;
+    flex-direction: column;
+    padding: 0px 1px;
+    padding-bottom: 40px;
+    gap: 5px;
+}
+.eachlist{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    background-color: rgb(255, 255, 255);
+    padding: 10px 10px;
+    border-radius: 5px;
+    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+
+}
+.rank{
+    width:25%;
+}
+.eachlist > p{
+    width: 25%;
+}
+/* Hide scrollbar for Webkit browsers (Chrome, Safari) */
+.cryptolist {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+  }
+  
+  .cryptolist::-webkit-scrollbar {
+    display: none; /* For Webkit browsers */
+  }
+
+  .coin-info {
+    display: flex;
+    width: 25%;
+    align-items: center;
+  }
+  
+  .coin-info img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+  }
+.hrchange{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+  
+  @media screen and (max-width:650px) {
+   
+    .rank{
+        max-width:10%;
+    }
+    .cryptolist{
+        font-size: 13px;
+    }
+    .cryptotable{
+        width: 95%;
+    }
+    
+}
