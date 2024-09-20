@@ -66,6 +66,9 @@
     border-radius: 10px;
     backdrop-filter: blur(10px);
 }
+.loadingdiv{
+    font-size:13px
+}
 
 @media screen and (max-width:850px) {
     .desc{
@@ -80,7 +83,6 @@
     .otherdetails{
         min-width:90vw;
     }
-    
 }
 @media screen and (max-width:950px) {
     .desc{

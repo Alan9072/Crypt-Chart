@@ -50,8 +50,8 @@ function CryptoDetail({ curr }) {
   }, [id, curr]);
 
   if (loading) {
-    return <div style={{width:"100%",height:"calc(100vh - 1.7cm)",display:"flex"
-      ,alignItems:"center",justifyContent:"center",fontSize:"1cm",backgroundColor:"black",color:"white"
+    return <div className="loadingdiv" style={{width:"100%",height:"calc(100vh - 1.7cm)",display:"flex"
+      ,alignItems:"center",justifyContent:"center",backgroundColor:"black",color:"white"
     }}>Loading...</div>;
   }
 
@@ -67,7 +67,7 @@ function CryptoDetail({ curr }) {
           <h2 style={{ color: "white" }}>{cryptoDetails.name}</h2>
         </div>
 
-        <ResponsiveContainer width="100%" height={200}>
+        <ResponsiveContainer width="98%" height={200}>
           <LineChart
             data={historicalData}
             margin={{ top: 10, right: 30, left: -20, bottom: 0 }}
