@@ -3,8 +3,11 @@ import "./Home.css";
 import { AiOutlineStock } from "react-icons/ai";
 import image from '../../assets/notfound.png'
 import { BsSearch } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
+
 
 function Home({ curr ,query}) {
+  const navigate = useNavigate();
   const [arr, setArr] = useState([]);
   const [val,setVal] = useState("");
   const [exchangeRates, setExchangeRates] = useState({});
@@ -23,7 +26,7 @@ function Home({ curr ,query}) {
       try {
         // Fetch cryptocurrency data
         const cryptoResponse = await fetch(
-          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`,
+          `/api/v3/coins/markets?vs_currency=usd`,
           options
         );
         const cryptoData = await cryptoResponse.json();
@@ -81,14 +84,14 @@ function Home({ curr ,query}) {
           <p className="rank">Rank</p>
           <p style={{ paddingLeft: "20px" }}>Coin</p>
           <p style={{ textAlign: "center" }}>Price</p>
-          <p style={{ textAlign: "end" }}>Changes <div style={{ fontSize: "8px" }}>(24hr)</div></p>
+          <p style={{ textAlign: "end" }}>Changes<span style={{ fontSize: "8px" ,display:"block"}}>(24hr)</span></p>
         </div>
         <div className="cryptolist">
           {
             filteredData.length > 0
           ?
            filteredData.map((item) => (
-            <div key={item.id} className="eachlist">
+            <div key={item.id} className="eachlist" onClick={() => navigate(`/crypto/${item.id}`)} >
               <p className="rank">{item.market_cap_rank}</p>
               <div className="coin-info" style={{ display: "flex", alignItems: "center" }}>
                 <img
@@ -108,12 +111,12 @@ function Home({ curr ,query}) {
                 {item.price_change_percentage_24h < 0 ? (
                   <>
                     <AiOutlineStock style={{ color: "red" ,transform: "scaleX(-1)"}} />
-                    <p style={{ color: "red" }}>{item.price_change_percentage_24h.toFixed(4)}%</p>
+                    <span style={{ color: "red",display:"block" }}>{item.price_change_percentage_24h.toFixed(4)}%</span>
                   </>
                 ) : (
                   <>
                     <AiOutlineStock style={{ color: "green" }} />
-                    <p style={{ color: "green" }}>{item.price_change_percentage_24h.toFixed(4)}%</p>
+                    <span style={{ color: "green",display:"block" }}>{item.price_change_percentage_24h.toFixed(4)}%</span>
                   </>
                 )}
               </p>

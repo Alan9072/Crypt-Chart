@@ -2,9 +2,12 @@ import React, { useState } from 'react'
 import { BsSearch } from "react-icons/bs";
 import './Navbar.css'
 import { CgMenuGridO } from "react-icons/cg";
+import { useLocation } from 'react-router-dom';
 
 function Navbar({curr,setCurr,query,setQuery}) {
     const [val,setVal] = useState("");
+    const location = useLocation();
+
     function handleChange(e){
         setVal(e.target.value)
         setQuery(e.target.value)
@@ -12,14 +15,25 @@ function Navbar({curr,setCurr,query,setQuery}) {
     function handleBtnSubmit(e){
         e.preventDefault();
     }
+
+    const isDetailsPage = location.pathname.startsWith('/crypto');
     
   return (
     <div className='navbar'>
         <h2>Crypt-Chart</h2>
-        <form className="navform" action="" onSubmit={handleBtnSubmit}>
+        {
+            !isDetailsPage &&(
+
+            <form className="navform" action="" onSubmit={handleBtnSubmit}>
             <input type="text" value={query} placeholder='Search crypto' onChange={handleChange}/>
             <BsSearch onClick={handleBtnSubmit} style={{backgroundColor:"white",height:"0.8cm",width:"0.9cm",padding:"3px",borderRadius:"5px"}}/>
-        </form>
+            </form>
+            )
+
+
+
+        }
+        
         <select value = {curr} onChange={(e)=>setCurr(e.target.value)}>
             <option value="usd" >USD</option>
             <option value="eur" >EUR</option>
