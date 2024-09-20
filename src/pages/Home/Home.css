@@ -29,7 +29,7 @@ h1{
 .hero > p{
     margin-top: 10px;
     font-size: smaller;
-    color: grey;
+    color: rgb(195, 195, 195);
 }
 .cryptotable{
     margin-top: 30px;
@@ -73,8 +73,12 @@ h1{
     background-color: rgba(72, 72, 72, 0.571);
     padding: 10px 10px;
     border-radius: 5px;
-    backdrop-filter: blur(10px);
-    box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    background: rgba(122, 122, 122, 0.128); /* Semi-transparent background */
+    border: 1px solid rgba(255, 255, 255, 0.18); /* Light border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+     /* Padding inside the div */
 
 }
 .rank{

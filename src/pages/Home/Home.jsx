@@ -76,7 +76,7 @@ function Home({ curr ,query}) {
       
       
         <form className="searchForm" action="" onSubmit={handleBtnSubmit}>
-            <input type="text" value={val} placeholder='Search crypto' onChange={(e)=>setVal(e.target.value)}/>
+            <input type="text" value={val} placeholder='Search top 100 cryptos...' onChange={(e)=>setVal(e.target.value)}/>
             <BsSearch  onClick={handleBtnSubmit} style={{backgroundColor:"black",height:"0.7cm",width:"0.9cm",padding:"3px",borderRadius:"5px",color:"white"}}/>
         </form>
 

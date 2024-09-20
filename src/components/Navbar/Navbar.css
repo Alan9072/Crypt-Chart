@@ -50,6 +50,7 @@ select{
     outline: none;
 }
 
+
 @media screen and (max-width:650px) {
     h2{
         font-size:0.7cm;
