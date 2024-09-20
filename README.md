@@ -9,5 +9,5 @@ This project is a cryptocurrency tracker that displays a list of cryptocurrencie
 - **Price Insights**: Visualize the price changes with an interactive graph using Recharts.
 - **Search Functionality**: Quickly search for specific cryptocurrencies by name.
 
-- 
+  
 ![My Local Image](./src/assets/crypt-chart.png)
