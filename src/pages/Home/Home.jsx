@@ -6,6 +6,7 @@ import { BsSearch } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 
 
+
 function Home({ curr ,query}) {
   const navigate = useNavigate();
   const [arr, setArr] = useState([]);
@@ -26,7 +27,7 @@ function Home({ curr ,query}) {
       try {
         // Fetch cryptocurrency data
         const cryptoResponse = await fetch(
-          `/api/v3/coins/markets?vs_currency=usd`,
+          `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd`,
           options
         );
         const cryptoData = await cryptoResponse.json();
@@ -69,8 +70,8 @@ function Home({ curr ,query}) {
     <div className="home">
 
       <div className="hero">
-        <h1>Crypto Chart</h1>
-        <p>Explore various cryptocurrencies and gain financial knowledge about them.</p>
+        <h1>Cryptocurrency Insights</h1>
+        <p>Discover the potential of digital currencies! Dive into various cryptocurrencies and boost your financial knowledge.<br/> Stay updated on market trends and make informed investment decisions with our comprehensive crypto chart.</p>
       </div>
       
       
@@ -110,13 +111,13 @@ function Home({ curr ,query}) {
               <p className="hrchange" style={{ textAlign: "end" }}>
                 {item.price_change_percentage_24h < 0 ? (
                   <>
-                    <AiOutlineStock style={{ color: "red" ,transform: "scaleX(-1)"}} />
-                    <span style={{ color: "red",display:"block" }}>{item.price_change_percentage_24h.toFixed(4)}%</span>
+                    <AiOutlineStock style={{ color: "#FF0305" ,transform: "scaleX(-1)"}} />
+                    <span style={{ color: "#FF0305",display:"block" }}>{item.price_change_percentage_24h.toFixed(4)}%</span>
                   </>
                 ) : (
                   <>
-                    <AiOutlineStock style={{ color: "green" }} />
-                    <span style={{ color: "green",display:"block" }}>{item.price_change_percentage_24h.toFixed(4)}%</span>
+                    <AiOutlineStock style={{ color: "#4DFF07" }} />
+                    <span style={{ color: "#4DFF07",display:"block" }}>{item.price_change_percentage_24h.toFixed(4)}%</span>
                   </>
                 )}
               </p>
