@@ -8,4 +8,6 @@ This project is a cryptocurrency tracker that displays a list of cryptocurrencie
 - **Currency Switching**: Toggle between different currencies such as EUR, INR, and USD.
 - **Price Insights**: Visualize the price changes with an interactive graph using Recharts.
 - **Search Functionality**: Quickly search for specific cryptocurrencies by name.
+
+- 
 ![My Local Image](./src/assets/crypt-chart.png)
