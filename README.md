@@ -1,8 +1,8 @@
-# React + Vite
+#Crypt-Chart
+This project is a cryptocurrency tracker that displays a list of cryptocurrencies along with their 24-hour price changes, insights, and graphs. Users can switch between currencies (EUR, INR, USD) and search for specific cryptocurrencies.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
+Cryptocurrency List: View the latest prices and 24-hour changes for various cryptocurrencies.
+Currency Switching: Toggle between different currencies such as EUR, INR, and USD.
+Price Insights: Visualize the price changes with an interactive graph using Recharts.
+Search Functionality: Quickly search for specific cryptocurrencies by name.
