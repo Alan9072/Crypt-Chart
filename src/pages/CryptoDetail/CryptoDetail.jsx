@@ -67,7 +67,7 @@ function CryptoDetail({ curr }) {
           <h2 style={{ color: "white" }}>{cryptoDetails.name}</h2>
         </div>
 
-        <ResponsiveContainer width="98%" height={200}>
+        <ResponsiveContainer width="95%" height={200}>
           <LineChart
             data={historicalData}
             margin={{ top: 10, right: 30, left: -20, bottom: 0 }}
